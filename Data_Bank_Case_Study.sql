@@ -29,6 +29,9 @@ WHERE end_date != '9999-12-31';
 -- Ans: 14.6 days
 
 
+
+-- --------------------------------------------------------- B. CUSTOMER TRANSACTIONS -------------------------------------------------------------------------
+
 -- 1. What is the unique count and total amount for each transaction type? ----------------------------------
 SELECT 
 	txn_type,  count(txn_type) 'Count', sum(txn_amount) 'Total Amount'
@@ -116,7 +119,10 @@ SELECT
 FROM Perc_Increase
 WHERE Percent_Change > 5;
 
--- C. Data Allocation Challenge -------------------------------------------------------------------------------------
+
+
+-- --------------------------------------------------------- C. DATA ALLOCATION CHALLENGE -------------------------------------------------------------------------
+
 -- 1. running customer balance column that includes the impact each transaction -------------------------------------
 WITH AmountCte AS (
    SELECT
